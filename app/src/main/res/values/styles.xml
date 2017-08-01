@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@style/Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="android:actionButtonStyle">@style/MyActionButtonStyle</item>
+    </style>
+
+    <style name="MyActionButtonStyle" parent="@android:style/Widget.Holo.Light.ActionButton">
+        <item name="android:minWidth">0dip</item>
+        <item name="android:paddingLeft">3dip</item>
+        <item name="android:paddingRight">3dip</item>
+    </style>
+
+</resources>

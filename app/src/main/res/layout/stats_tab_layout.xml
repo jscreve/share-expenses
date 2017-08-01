@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- The main content view -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/linearLayout1">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/linearLayout2">
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/start_date"
+                android:id="@+id/start_date"
+                />
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/end_date"
+                android:id="@+id/end_date"
+                />
+        <Button
+                android:id="@+id/select_participants"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/participants_selection" />
+        <TextView android:id="@+id/displayed_participants"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text=""
+                  android:textSize="20sp"
+                  android:layout_gravity="center_vertical"
+                  android:imeOptions="actionDone"/>
+        <Button
+                android:id="@+id/select_categories"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/categories_selection" />
+        <TextView android:id="@+id/displayed_categories"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text=""
+                  android:textSize="20sp"
+                  android:layout_gravity="center_vertical"
+                  android:imeOptions="actionDone"/>
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/display_graph"
+                android:id="@+id/display_graph"
+                />
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/display_graph_per_month"
+                android:id="@+id/display_graph_per_month"
+                />
+    </LinearLayout>
+</LinearLayout>

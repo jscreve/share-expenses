@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- The main content view -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/linearLayout1">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/QIF_file"
+            android:gravity="center_vertical|center_horizontal" android:textSize="20sp"
+            android:singleLine="false"/>
+    <!-- The main content view -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:id="@+id/linearLayout2">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:orientation="horizontal"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:id="@+id/linearLayout2_bis">
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start_date"
+                    android:id="@+id/start_date"
+                    />
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/end_date"
+                    android:id="@+id/end_date"
+                    />
+        </LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/export"
+            android:id="@+id/export_file"/>
+    </LinearLayout>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/SQL_files"
+            android:gravity="center_vertical|center_horizontal" android:textSize="20sp"
+            android:singleLine="false"/>
+    <!-- The main content view -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:id="@+id/linearLayout3">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/export_SQL"
+                android:id="@+id/export_sql"
+                />
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/export_SQL_mail"
+                android:id="@+id/export_sql_mail"
+                />
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/import_SQL"
+                android:id="@+id/import_sql"
+                />
+    </LinearLayout>
+</LinearLayout>

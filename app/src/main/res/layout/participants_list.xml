@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <View android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        />
+        <ListView
+            android:layout_width="300dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/participantsListView" android:divider="@android:color/holo_blue_dark" android:dividerHeight="2dp"
+            android:layout_weight="1"/>
+</LinearLayout>

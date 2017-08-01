@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Search, should appear as action button -->
+    <item android:id="@+id/action_new"
+          android:icon="@drawable/ic_action_new"
+          android:title="@string/action_new"
+          app:showAsAction="always"/>
+    <item android:id="@+id/action_remove"
+          android:icon="@drawable/ic_action_discard"
+          android:title="@string/action_remove"
+          app:showAsAction="always"/>
+    <item android:id="@+id/action_accept"
+          android:icon="@drawable/ic_action_accept"
+          android:title="@string/action_accept"
+          app:showAsAction="always"/>
+</menu>

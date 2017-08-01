@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ShareExpenses</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Ouvrir</string>
+    <string name="drawer_close">Fermer</string>
+    <string name="add_account">Ajout compte</string>
+    <string name="remove_account">Suppresion compte</string>
+    <string name="display_graph">Afficher graphique</string>
+    <string name="display_graph_per_month">Afficher graphique par mois</string>
+    <string name="update_date">Mettre à jour</string>
+    <string name="end_date">Date fin</string>
+    <string name="start_date">Date début</string>
+    <string name="result_expenses">Bilan</string>
+    <string name="account_friends">Amis du compte</string>
+    <string name="add_friend">Ajout d\'un ami</string>
+    <string name="account_expenses">Dépenses du compte</string>
+    <string name="add_expense">Ajout dépense</string>
+    <string name="add_category">Ajout d\'une catégorie</string>
+    <string name="account_categories">Catégories du compte</string>
+    <string name="name">Prénom</string>
+    <string name="last_name">Nom</string>
+    <string name="value">Montant</string>
+    <string name="participants_selection">Sélection participants</string>
+    <string name="categories_selection">Sélection catégories</string>
+    <string name="add_update_expense">Ajout / update dépense</string>
+    <string name="categories_for_account">Categories pour ce compte</string>
+    <string name="ok">OK</string>
+    <string name="modify">Modifier</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete_category_question">Supprimer catégorie ?</string>
+    <string name="delete_expense_question">Supprimer dépense ?</string>
+    <string name="actions">Actions</string>
+    <string name="please_select_an_account">Merci de séléctionner un compte</string>
+    <string name="sure_to_delete_account">Etes vous sûr d\'effacer ce compte ?</string>
+    <string name="friends_for_account">Amis pour ce compte</string>
+    <string name="delete_participant_question">Supprimer participant ?</string>
+    <string name="expenses">Dépenses</string>
+    <string name="friends">Participants</string>
+    <string name="categories">Catégories</string>
+    <string name="debts">Dettes</string>
+    <string name="stats">Stats</string>
+    <string name="export">Exporter</string>
+    <string name="update_category_question">Mise à jour de la catégorie</string>
+    <string name="rename">Renommer</string>
+    <string name="delete">Effacer</string>
+
+    <string name="action_new">Ajouter</string>
+    <string name="action_edit">Editer</string>
+    <string name="action_remove">Supprimer</string>
+    <string name="action_accept">Valider</string>
+    <string name="action_cancel">Annuler</string>
+
+    <string name="action_remove_sure">Etes vous sûr de vouloir supprimer ?</string>
+    <string name="select_one_expense">Merci de choisir une seule dépense</string>
+    <string name="select_one_category">Merci de choisir une seule catégorie</string>
+
+    <string name="copy_sql_file">Copier ficher SQL vers</string>
+    <string name="import_sql_file">Importer ficher SQL \"expense\" depuis</string>
+    <string name="export_sql_file">Exporter fichier SQL</string>
+    <string name="copy">Copie</string>
+
+    <string name="must_pay">doit</string>
+    <string name="to">à</string>
+
+    <string name="accounts">Comptes</string>
+    <string name="account_name">Nom du compte</string>
+    <string name="category_name">Nom de la catégorie</string>
+    <string name="expense_name">Nature de la dépense</string>
+    <string name="paid_by">Payé par \:</string>
+
+    <string name="import_SQL">Import en SQL</string>
+    <string name="export_SQL">Export en SQL</string>
+    <string name="export_SQL_mail">Export du SQL par mail</string>
+
+    <string name="QIF_file">Fichier QIF</string>
+    <string name="SQL_files">Fichiers SQL</string>
+
+    <string name="add_participant">Ajout participant</string>
+
+    <string name="please_define_participants_first">Merci de définir des amis</string>
+
+    <string name="category_is_used_in_account">Désolé une ou plusieurs catégories sont utilisées pour le compte</string>
+
+    <string name="participant_is_used_in_account">Désolé un ou plusieurs participants sont utilisés pour le compte</string>
+
+    <string name="dropbox">Dropbox</string>
+
+    <string name="link_dropbox">Lier compte Dropbox</string>
+
+    <string name="unlink_dropbox">Désactiver compte Dropbox</string>
+
+    <string name="reload_data">Recharger données Dropbox</string>
+
+    <string name="overwrite_sql_file">Ecraser les données locales ?</string>
+
+    <string name="dropbox_sync_failed">Erreur de synchro dropbox</string>
+</resources>
