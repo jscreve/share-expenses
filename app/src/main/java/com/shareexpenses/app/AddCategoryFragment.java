@@ -4,15 +4,9 @@ package com.shareexpenses.app;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.*;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-
 import com.shareexpenses.app.model.Account;
 import com.shareexpenses.app.model.Category;
 
@@ -117,6 +111,5 @@ public class AddCategoryFragment extends Fragment {
         if(categories != null) {
             outState.putSerializable("categories", categories);
         }
-        super.onSaveInstanceState(outState);
     }
 }

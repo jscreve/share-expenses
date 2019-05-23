@@ -2,18 +2,14 @@ package com.shareexpenses.app;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.*;
 import android.widget.ListView;
-
 import com.shareexpenses.app.model.Account;
 import com.shareexpenses.app.model.Expense;
 import com.shareexpenses.app.model.Participant;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 /**
  * Created by dlta on 14/03/2014.
@@ -75,6 +71,5 @@ public class ResultTabFragment extends Fragment {
         if(expenses != null) {
             outState.putSerializable("expenses", expenses);
         }
-        super.onSaveInstanceState(outState);
     }
 }

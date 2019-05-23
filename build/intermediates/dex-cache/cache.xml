@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/.android/build-cache/d4a3cea119da0d461f7ea0d4d92045e78c159b14/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="37bf8de5b4f9e7e93006db783b9b3168e32e38e9">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/debug/classes_a89aa25747df7675715014d1e22bf7ce1b3253cc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/.android/build-cache/2998c2df74618d0040bf652da781b9de6e04c921/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/debug/classes_6b2045c2e18ff0c0423acc85f69de740ef8a420d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/exploded-aar/com.android.support/support-v4/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="21.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/release/com.android.support-support-v4-26.0.0-alpha1_0ba9852eeb2a6ac55b0a99ed2d279997f5705e53.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/Documents/Development/Android/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/26.0.0-alpha1/support-annotations-26.0.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="21.0.1"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/release/support-annotations-26.0.0-alpha1_6263d554a6e96b230dc4cf69baee0068e766eeeb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/exploded-aar/com.android.support/support-compat/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="21.0.1"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/release/com.android.support-support-compat-26.0.0-alpha1_c0b7a15f07d5210ce25da8a2feed5f4fdb0607bc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/.android/build-cache/43c846b39dfafdfff2af79deacb5e1401dce6ca0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/debug/classes_815fa3e8ba60d87b5a79934a117d66c2c3e88509.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="21.0.1"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/release/com.android.support-support-vector-drawable-26.0.0-alpha1_74f9faadc45dadaa23d44d5fbc959602fd15dd36.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/.android/build-cache/d401d02570dd6b7f32884f6f14563b56befb9765/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/debug/classes_db1b5a2f393007bf7ffa8dfeef43380663d8d974.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/exploded-aar/com.android.support/support-fragment/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="21.0.1"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/release/com.android.support-support-fragment-26.0.0-alpha1_418c43c04fc358878f2295eb30c4593a97d53da4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/libs/dropbox-sync-sdk-android.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="21.0.1"
+        sha1="27c6a602b8af65c4bd4741af2be12686d561d02c">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/release/dropbox-sync-sdk-android_5776900c98c1aca80b97bfb8e2468037b8bdedd6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="21.0.1"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/release/com.android.support-appcompat-v7-26.0.0-alpha1_073e806cd82e39ea49a20515911950acfc2d1eab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/exploded-aar/com.jjoe64/graphview/4.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="21.0.1"
+        sha1="37bf8de5b4f9e7e93006db783b9b3168e32e38e9">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/release/com.jjoe64-graphview-4.0.1_2866bd6b6498f8dd0daaf2421dcc0c76a4d42022.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/.android/build-cache/99fdbc3252f64e6ac11e3fbaaec565db5bfd496f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/debug/classes_f1718970c40fea1b46214b3bcd7251fcd97a5ade.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="21.0.1"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/release/com.android.support-support-core-utils-26.0.0-alpha1_81ce96ded45500c58e580becef770ee0c64df85f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/libs/dropbox-sync-sdk-android.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="27c6a602b8af65c4bd4741af2be12686d561d02c">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/debug/dropbox-sync-sdk-android_5776900c98c1aca80b97bfb8e2468037b8bdedd6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/.android/build-cache/644b533a738162790ac2aede5d269a370399c4a6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/debug/classes_971c8e76932b6ea910455cd49e1a3c4cd88cbc6f.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/libs/dropbox-sync-sdk-android.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="27c6a602b8af65c4bd4741af2be12686d561d02c">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/transforms/dex/debug/folders/1000/2/dropbox-sync-sdk-android_5776900c98c1aca80b97bfb8e2468037b8bdedd6/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/Documents/Development/Android/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/26.0.0-alpha1/support-annotations-26.0.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/debug/support-annotations-26.0.0-alpha1_6263d554a6e96b230dc4cf69baee0068e766eeeb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/.android/build-cache/f2e24e3b81335ed889bc3c7a773e25f5f491f5af/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/debug/classes_1555c070d1a7a9bf61146bd7fd4486a6f0fb942f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="21.0.1"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/release/com.android.support-support-media-compat-26.0.0-alpha1_af9a92a4895fae6b31693e3e592cdd35cc00423e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/.android/build-cache/bb56d2b18a2f4c2d6bdc2142cf940203d5602039/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/debug/classes_361f90a2de6cb4f514fe0202885969662c5ea1e5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="21.0.1"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/release/com.android.support-support-core-ui-26.0.0-alpha1_8ed60a08992f87188cc028d8b699b06dbdb9f0ba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/.android/build-cache/507555d8255503a661f1938f78a753122f924557/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/debug/classes_70d1a864ed10b80e5579eba59f98390ccd1788b2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/.android/build-cache/0bbbbe805951e7ce48edfbd7a2e3c53b42b80467/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/debug/classes_59bcba97f7d06f40895cb0d836193e5bdc69da7b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="21.0.1"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/pre-dexed/release/com.android.support-animated-vector-drawable-26.0.0-alpha1_b77bba7403ce96ac001fa714f57e8bcf8fc5729a.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c323c36ecc68965c4cfb460f7721113d2b61ed03">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_b265d762449f1b2ce65bf59ab36feb470d2ad46f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b55ab04e2b96b9b6ce99486896e9835aab46bd87">
+        <dex dex="/Users/jscreve/Documents/Development/IdeaProjects/ShareExpenses/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5d9b0e4b69dad01994a60204f8ae27d7eb94cf03/classes.dex" />
+    </item>
+
+</items>

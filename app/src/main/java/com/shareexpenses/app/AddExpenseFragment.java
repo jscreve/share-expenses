@@ -3,31 +3,14 @@ package com.shareexpenses.app;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.support.v4.app.DialogFragment;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.*;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.TextView;
-
-import com.shareexpenses.app.model.Account;
-import com.shareexpenses.app.model.Category;
-import com.shareexpenses.app.model.CategoryForExpense;
-import com.shareexpenses.app.model.Currency;
-import com.shareexpenses.app.model.Expense;
-import com.shareexpenses.app.model.Participant;
-import com.shareexpenses.app.model.ParticipantForExpense;
+import android.widget.*;
+import com.shareexpenses.app.model.*;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -415,6 +398,5 @@ public class AddExpenseFragment extends Fragment implements UpdateCategoriesInte
         if(participantsForAccount != null) {
             outState.putSerializable("participants", participantsForAccount);
         }
-        super.onSaveInstanceState(outState);
     }
 }

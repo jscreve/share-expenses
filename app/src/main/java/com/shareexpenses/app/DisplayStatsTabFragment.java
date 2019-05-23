@@ -2,25 +2,28 @@ package com.shareexpenses.app;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.util.Log;
+import android.view.*;
+import android.widget.Button;
 import android.widget.LinearLayout;
-
 import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.helper.DateAsXAxisLabelFormatter;
 import com.jjoe64.graphview.helper.StaticLabelsFormatter;
 import com.jjoe64.graphview.series.BarGraphSeries;
 import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
 import com.shareexpenses.app.model.Account;
 import com.shareexpenses.app.model.Category;
 import com.shareexpenses.app.model.Expense;
 import com.shareexpenses.app.model.Participant;
 
+import java.text.DateFormat;
 import java.text.DecimalFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Map;
 import java.util.TreeMap;
 
 /**
@@ -203,6 +206,5 @@ public class DisplayStatsTabFragment extends Fragment {
         if(graphStyle != null) {
             outState.putSerializable("graphStyle", graphStyle);
         }
-        super.onSaveInstanceState(outState);
     }
 }

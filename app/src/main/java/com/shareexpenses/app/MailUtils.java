@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Parcelable;
-import android.support.v4.content.FileProvider;
 import android.widget.Toast;
 
 import java.io.File;
@@ -42,15 +41,13 @@ public class MailUtils {
     public static void sendMail(Context context, String email, String subject, String extraText, File attachment) {
         Intent i = new Intent(Intent.ACTION_SEND);
         i.setType("*/*");
-        //i.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(attachment));
-        i.putExtra(Intent.EXTRA_STREAM, FileProvider.getUriForFile(context, BuildConfig.APPLICATION_ID + ".provider", attachment));
+        i.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(attachment));
         i.putExtra(Intent.EXTRA_EMAIL, new String[]{email});
         i.putExtra(Intent.EXTRA_SUBJECT, subject);
         i.putExtra(Intent.EXTRA_TEXT, extraText);
 
         try {
             context.startActivity(createEmailOnlyChooserIntent(i, email, "Send via email", context));
-            //context.startActivity(i);
         } catch (android.content.ActivityNotFoundException ex) {
             Toast.makeText(context, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
         }

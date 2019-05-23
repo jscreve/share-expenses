@@ -1,20 +1,13 @@
 package com.shareexpenses.app;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.ListView;
-
+import android.view.*;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.*;
 import com.shareexpenses.app.model.Account;
 import com.shareexpenses.app.model.Category;
 import com.shareexpenses.app.model.CategoryForExpense;
@@ -284,6 +277,5 @@ public class CategoriesTabFragment extends Fragment {
         if(expenses != null) {
             outState.putSerializable("expenses", expenses);
         }
-        super.onSaveInstanceState(outState);
     }
 }

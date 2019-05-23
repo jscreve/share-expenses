@@ -1,10 +1,9 @@
 buildscript {
     repositories {
         jcenter()
-        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'com.android.tools.build:gradle:2.3.0'
     }
 }
 apply plugin: 'com.android.application'
@@ -15,25 +14,23 @@ repositories {
 
 android {
     compileSdkVersion 26
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 26
-        versionCode 17
-        versionName "1.17"
+        targetSdkVersion 23
+        versionCode 16
+        versionName "1.16"
     }
     buildTypes {
         release {
             minifyEnabled false
         }
     }
-    lintOptions {
-        abortOnError false
-    }
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.jjoe64:graphview:4.0.1'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:26.0.+'
+    compile 'com.jjoe64:graphview:4.0.1'
 }
