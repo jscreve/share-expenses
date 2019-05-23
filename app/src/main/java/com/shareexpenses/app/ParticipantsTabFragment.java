@@ -3,14 +3,22 @@ package com.shareexpenses.app;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v4.app.Fragment;
-import android.util.Log;
-import android.view.*;
-import android.widget.*;
-import com.shareexpenses.app.model.*;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.CheckBox;
+import android.widget.ListView;
 
-import java.io.File;
+import com.shareexpenses.app.model.Account;
+import com.shareexpenses.app.model.Expense;
+import com.shareexpenses.app.model.Participant;
+import com.shareexpenses.app.model.ParticipantForExpense;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -232,5 +240,6 @@ public class ParticipantsTabFragment extends Fragment {
         if(expenses != null) {
             outState.putSerializable("expenses", expenses);
         }
+        super.onSaveInstanceState(outState);
     }
 }

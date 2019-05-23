@@ -3,19 +3,22 @@ package com.shareexpenses.app;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
-import android.view.*;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.ListView;
+
 import com.shareexpenses.app.model.Account;
 import com.shareexpenses.app.model.Category;
 import com.shareexpenses.app.model.Expense;
@@ -24,12 +27,12 @@ import com.shareexpenses.app.model.Participant;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
     ListView listView;
     ArrayList<Account> accounts;
-    private Account selectedAccount=null;
-    private Bundle args=new Bundle();
+    private Account selectedAccount = null;
+    private Bundle args = new Bundle();
     // gestion du BackStack
     private boolean fragmentAnimated;
     private ArrayList<DrawerItem> drawerItems;
@@ -66,11 +69,10 @@ public class MainActivity extends ActionBarActivity {
         this.fragmentAnimated = fragmentAnimated;
     }
 
-    private void configureBackStack()
-    {
+    private void configureBackStack() {
         FragmentManager fm;
-        fragmentAnimated=true;
-        fm=getSupportFragmentManager();
+        fragmentAnimated = true;
+        fm = getSupportFragmentManager();
         fm.addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
             @Override
             public void onBackStackChanged() {
@@ -104,14 +106,14 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void buildMenu() {
-        drawerItems=new ArrayList<DrawerItem>();
+        drawerItems = new ArrayList<DrawerItem>();
         //add section
         drawerItems.add(new DrawerItem(ACCOUNTS, false, true));
         //add accounts
         List<AccountDrawerItem> accountsDrawerItems = new ArrayList<AccountDrawerItem>();
-        if(accounts != null) {
+        if (accounts != null) {
             for (Account account : accounts) {
-                AccountDrawerItem accountDrawerItem=new AccountDrawerItem(account.getAccountName(), account.getId(), true, false);
+                AccountDrawerItem accountDrawerItem = new AccountDrawerItem(account.getAccountName(), account.getId(), true, false);
                 accountsDrawerItems.add(accountDrawerItem);
                 drawerItems.add(accountDrawerItem);
             }
@@ -154,11 +156,9 @@ public class MainActivity extends ActionBarActivity {
 
         //mTitle = "test";
 
-        if (null!=savedInstanceState)
-        {
-            accounts=(ArrayList<Account>)savedInstanceState.getSerializable("accounts");
-        }
-        else {
+        if (null != savedInstanceState) {
+            accounts = (ArrayList<Account>) savedInstanceState.getSerializable("accounts");
+        } else {
             accounts = getAccounts();
         }
         buildMenu();
@@ -206,11 +206,12 @@ public class MainActivity extends ActionBarActivity {
     }
 
     @Override
-    public void onSaveInstanceState (Bundle outState)
-    {
-        if(accounts != null) {
+    public void onSaveInstanceState(Bundle outState) {
+        if (accounts != null) {
             outState.putSerializable("accounts", accounts);
         }
+        //TODO should be activated
+        //super.onSaveInstanceState(outState);
     }
 
     @Override
@@ -261,18 +262,18 @@ public class MainActivity extends ActionBarActivity {
         setTitle(drawerItem.getName());
         //push fragment
         //action
-        if(!drawerItem.isAccount() && !drawerItem.isSeparator()) {
-            if(drawerItem.getName().equals(ADD_ACCOUNT)) {
+        if (!drawerItem.isAccount() && !drawerItem.isSeparator()) {
+            if (drawerItem.getName().equals(ADD_ACCOUNT)) {
                 AddAccountFragment addAccountFragment = new AddAccountFragment();
                 addAccountFragment.setArguments(args);
                 pushFragment(addAccountFragment);
                 mDrawerLayout.closeDrawer(mDrawerList);
-            } else if(drawerItem.getName().equals(EXPORT)) {
+            } else if (drawerItem.getName().equals(EXPORT)) {
                 exportTabFragment = new ExportTabFragment();
                 exportTabFragment.setArguments(args);
                 pushFragment(exportTabFragment);
                 mDrawerLayout.closeDrawer(mDrawerList);
-            } else if(selectedAccount == null) {
+            } else if (selectedAccount == null) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setMessage(getString(R.string.please_select_an_account))
                         .setNeutralButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
@@ -324,17 +325,17 @@ public class MainActivity extends ActionBarActivity {
                 }
             }
         } else {
-            if(drawerItem.isAccount) {
+            if (drawerItem.isAccount) {
                 CheckBox checkBox = (CheckBox) view.findViewById(R.id.checkbox);
                 checkBox.toggle();
-                adapter.toggleCheckBox(checkBox, (AccountDrawerItem)drawerItem);
+                adapter.toggleCheckBox(checkBox, (AccountDrawerItem) drawerItem);
             }
         }
     }
 
     public void selectAccount(AccountDrawerItem accountDrawerItem) {
 
-        if(accountDrawerItem == null) {
+        if (accountDrawerItem == null) {
             selectedAccount = null;
         } else {
             //account selected
@@ -394,45 +395,42 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
+                                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             return rootView;
         }
     }
 
-    public void showFragment(Fragment newFragment)
-    {
+    public void showFragment(Fragment newFragment) {
         FragmentManager fm;
         FragmentTransaction transaction;
 
-        fm=getSupportFragmentManager();
+        fm = getSupportFragmentManager();
         setFragmentAnimated(false);
         // Dépile tous les éléments dans la BackStack
         getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        transaction=fm.beginTransaction();
+        transaction = fm.beginTransaction();
         transaction.replace(R.id.content_frame, newFragment);
         transaction.commit();
         invalidateOptionsMenu();
     }
 
-    public void pushFragment(android.support.v4.app.Fragment newFragment)
-    {
+    public void pushFragment(android.support.v4.app.Fragment newFragment) {
         FragmentManager fm;
         FragmentTransaction transaction;
 
-        fm=getSupportFragmentManager();
-        transaction=fm.beginTransaction();
+        fm = getSupportFragmentManager();
+        transaction = fm.beginTransaction();
         //transaction.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right);
         transaction.addToBackStack(null);
         transaction.replace(R.id.content_frame, newFragment);
         transaction.commit();
     }
 
-    public void popFragment()
-    {
+    public void popFragment() {
         // Catch back action and pops from backstack
         // (if you called previously to addToBackStack() in your transaction)
-        if (getSupportFragmentManager().getBackStackEntryCount() > 0){
+        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
             getSupportFragmentManager().popBackStack();
         }
     }

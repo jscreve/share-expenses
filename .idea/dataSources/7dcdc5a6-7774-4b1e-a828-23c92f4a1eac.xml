@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="SQLlite JS">
-  <database-model serializer="dbm" rdbms="SQLITE" format-version="4.2">
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.15">
     <root id="1"/>
     <schema id="2" parent="1" name="main">
       <Current>1</Current>
@@ -16,11 +16,11 @@
     <table id="10" parent="2" name="sqlite_master"/>
     <table id="11" parent="2" name="sqlite_sequence"/>
     <column id="12" parent="3" name="name">
-      <DataType>TEXT|0</DataType>
+      <DataType>TEXT|0s</DataType>
     </column>
     <column id="13" parent="3" name="id">
       <Position>1</Position>
-      <DataType>INTEGER|0</DataType>
+      <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
@@ -29,21 +29,21 @@
       <Primary>1</Primary>
     </key>
     <column id="15" parent="4" name="locale">
-      <DataType>TEXT|0</DataType>
+      <DataType>TEXT|0s</DataType>
     </column>
     <column id="16" parent="5" name="id">
-      <DataType>INTEGER|0</DataType>
+      <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="17" parent="5" name="name">
       <Position>1</Position>
-      <DataType>TEXT|0</DataType>
+      <DataType>TEXT|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="18" parent="5" name="id_account">
       <Position>2</Position>
-      <DataType>INTEGER|0</DataType>
+      <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <key id="19" parent="5">
@@ -51,18 +51,18 @@
       <Primary>1</Primary>
     </key>
     <column id="20" parent="6" name="id">
-      <DataType>INTEGER|0</DataType>
+      <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="21" parent="6" name="id_category">
       <Position>1</Position>
-      <DataType>INTEGER|0</DataType>
+      <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="22" parent="6" name="id_expense">
       <Position>2</Position>
-      <DataType>INTEGER|0</DataType>
+      <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <key id="23" parent="6">
@@ -70,38 +70,38 @@
       <Primary>1</Primary>
     </key>
     <column id="24" parent="7" name="id">
-      <DataType>INTEGER|0</DataType>
+      <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="25" parent="7" name="name">
       <Position>1</Position>
-      <DataType>TEXT|0</DataType>
+      <DataType>TEXT|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="26" parent="7" name="value">
       <Position>2</Position>
-      <DataType>REAL|0</DataType>
+      <DataType>REAL|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="27" parent="7" name="date">
       <Position>3</Position>
-      <DataType>TEXT|0</DataType>
+      <DataType>TEXT|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="28" parent="7" name="currency">
       <Position>4</Position>
-      <DataType>TEXT|0</DataType>
+      <DataType>TEXT|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="29" parent="7" name="account_id">
       <Position>5</Position>
-      <DataType>INTEGER|0</DataType>
+      <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="30" parent="7" name="payer_id">
       <Position>6</Position>
-      <DataType>INTEGER|0</DataType>
+      <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <key id="31" parent="7">
@@ -109,23 +109,23 @@
       <Primary>1</Primary>
     </key>
     <column id="32" parent="8" name="id">
-      <DataType>INTEGER|0</DataType>
+      <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="33" parent="8" name="id_expense">
       <Position>1</Position>
-      <DataType>INTEGER|0</DataType>
+      <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="34" parent="8" name="id_participant">
       <Position>2</Position>
-      <DataType>INTEGER|0</DataType>
+      <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="35" parent="8" name="percentage">
       <Position>3</Position>
-      <DataType>INTEGER|0</DataType>
+      <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <key id="36" parent="8">
@@ -133,51 +133,51 @@
       <Primary>1</Primary>
     </key>
     <column id="37" parent="9" name="firstName">
-      <DataType>TEXT|0</DataType>
+      <DataType>TEXT|0s</DataType>
     </column>
     <column id="38" parent="9" name="lastName">
       <Position>1</Position>
-      <DataType>TEXT|0</DataType>
+      <DataType>TEXT|0s</DataType>
     </column>
     <column id="39" parent="9" name="id">
       <Position>2</Position>
-      <DataType>INTEGER|0</DataType>
+      <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="40" parent="9" name="account_id">
       <Position>3</Position>
-      <DataType>INTEGER|0</DataType>
+      <DataType>INTEGER|0s</DataType>
     </column>
     <key id="41" parent="9">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
     <column id="42" parent="10" name="type">
-      <DataType>text|0</DataType>
+      <DataType>text|0s</DataType>
     </column>
     <column id="43" parent="10" name="name">
       <Position>1</Position>
-      <DataType>text|0</DataType>
+      <DataType>text|0s</DataType>
     </column>
     <column id="44" parent="10" name="tbl_name">
       <Position>2</Position>
-      <DataType>text|0</DataType>
+      <DataType>text|0s</DataType>
     </column>
     <column id="45" parent="10" name="rootpage">
       <Position>3</Position>
-      <DataType>integer|0</DataType>
+      <DataType>integer|0s</DataType>
     </column>
     <column id="46" parent="10" name="sql">
       <Position>4</Position>
-      <DataType>text|0</DataType>
+      <DataType>text|0s</DataType>
     </column>
     <column id="47" parent="11" name="name">
-      <DataType>|0</DataType>
+      <DataType>|0s</DataType>
     </column>
     <column id="48" parent="11" name="seq">
       <Position>1</Position>
-      <DataType>|0</DataType>
+      <DataType>|0s</DataType>
     </column>
   </database-model>
 </dataSource>

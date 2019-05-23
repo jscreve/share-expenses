@@ -28,33 +28,74 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/start_date"
-                    android:id="@+id/start_date"
+                android:id="@+id/start_qif_date"
                     />
             <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/end_date"
-                    android:id="@+id/end_date"
+                android:id="@+id/end_qif_date"
                     />
         </LinearLayout>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/export"
-            android:id="@+id/export_file"/>
+            android:id="@+id/export_qif_file" />
     </LinearLayout>
     <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:text="@string/SQL_files"
-            android:gravity="center_vertical|center_horizontal" android:textSize="20sp"
-            android:singleLine="false"/>
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:text="@string/CSV_file"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="20sp"
+        android:singleLine="false" />
     <!-- The main content view -->
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                  android:orientation="vertical"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:id="@+id/linearLayout3">
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout3">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout3_bis">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/start_date"
+                android:id="@+id/start_csv_date" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/end_date"
+                android:id="@+id/end_csv_date" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/export"
+            android:id="@+id/export_csv_file" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:text="@string/SQL_files"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="20sp"
+        android:singleLine="false" />
+    <!-- The main content view -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout4">
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

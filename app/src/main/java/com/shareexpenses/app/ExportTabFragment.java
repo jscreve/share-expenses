@@ -1,9 +1,7 @@
 package com.shareexpenses.app;
 
 import android.Manifest;
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -11,8 +9,13 @@ import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.view.*;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+
 import com.shareexpenses.app.model.Account;
 import com.shareexpenses.app.model.Category;
 import com.shareexpenses.app.model.Expense;
@@ -24,56 +27,66 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static com.shareexpenses.app.PermissionManager.*;
+import static com.shareexpenses.app.PermissionManager.EXPORT_WRITE_EXTERNAL_STORAGE;
+import static com.shareexpenses.app.PermissionManager.IMPORT_WRITE_EXTERNAL_STORAGE;
+import static com.shareexpenses.app.PermissionManager.MAIL_WRITE_EXTERNAL_STORAGE;
 
 /**
  * Created by dlta on 14/03/2014.
  */
 public class ExportTabFragment extends Fragment {
 
-    Button exportButton;
+    Button exportQIFButton;
+    Button exportCSVButton;
     Account account;
     ArrayList<Expense> expenses;
     ArrayList<Participant> participantsForAccount;
     ArrayList<Category> categoriesForAccount;
 
-    Button startButton;
-    Button endButton;
+    Button startQIFButton;
+    Button endQIFButton;
+    Button startCSVButton;
+    Button endCSVButton;
     Button importSQLButton;
     Button exportSQLButton;
     Button exportSQLMailButton;
-    private Date[] startDate = new Date[1];
-    private Date[] endDate = new Date[1];
+    private Date[] startQIFDate = new Date[1];
+    private Date[] endQIFDate = new Date[1];
+    private Date[] startCSVDate = new Date[1];
+    private Date[] endCSVDate = new Date[1];
     private boolean permissionGranted = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState)
     {
         final View view=inflater.inflate(R.layout.export_tab_layout,container,false);
-        startButton=(Button)view.findViewById(R.id.start_date);
-        endButton=(Button)view.findViewById(R.id.end_date);
+        startQIFButton = (Button) view.findViewById(R.id.start_qif_date);
+        endQIFButton = (Button) view.findViewById(R.id.end_qif_date);
+        startCSVButton = (Button) view.findViewById(R.id.start_csv_date);
+        endCSVButton = (Button) view.findViewById(R.id.end_csv_date);
         importSQLButton=(Button)view.findViewById(R.id.import_sql);
         exportSQLButton=(Button)view.findViewById(R.id.export_sql);
         exportSQLMailButton=(Button)view.findViewById(R.id.export_sql_mail);
-        exportButton=(Button)view.findViewById(R.id.export_file);
+        exportQIFButton = (Button) view.findViewById(R.id.export_qif_file);
+        exportCSVButton = (Button) view.findViewById(R.id.export_csv_file);
 
         setHasOptionsMenu(true);
 
-        startButton.setOnClickListener(new View.OnClickListener() {
+        startQIFButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Util.showDatePickerDialog(v, getActivity(), startDate, startButton);
+                Util.showDatePickerDialog(v, getActivity(), startQIFDate, startQIFButton);
             }
         });
 
-        endButton.setOnClickListener(new View.OnClickListener() {
+        endQIFButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Util.showDatePickerDialog(v, getActivity(), endDate, endButton);
+                Util.showDatePickerDialog(v, getActivity(), endQIFDate, endQIFButton);
             }
         });
 
-        exportButton.setOnClickListener(new View.OnClickListener() {
+        exportQIFButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd-yyyy_HH-mm-ss");
@@ -81,12 +94,43 @@ public class ExportTabFragment extends Fragment {
                 String tempFileName = new StringBuilder().append("QIF_").append(sDate).append(".qif").toString();
                 List<Expense> tempExpenses=expenses;
                 //extract expenses
-                if(startDate[0] != null && endDate[0] != null) {
-                    tempExpenses=ComputeReport.extractExpenses(startDate[0], endDate[0], expenses, null, null);
+                if (startQIFDate[0] != null && endQIFDate[0] != null) {
+                    tempExpenses = ComputeReport.extractExpenses(startQIFDate[0], endQIFDate[0], expenses, null, null);
                 }
                 File outputFile=QIFUtils.generateQIFFile(tempExpenses, categoriesForAccount, account.getAccountName(), tempFileName, getActivity());
                 //need to fill up the email
                 MailUtils.sendMail(getActivity(), "", "QIF file", "QIF file", outputFile);
+            }
+        });
+
+        startCSVButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Util.showDatePickerDialog(v, getActivity(), startCSVDate, startCSVButton);
+            }
+        });
+
+        endCSVButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Util.showDatePickerDialog(v, getActivity(), endCSVDate, endCSVButton);
+            }
+        });
+
+        exportCSVButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd-yyyy_HH-mm-ss");
+                String sDate = simpleDateFormat.format(new Date());
+                String tempFileName = new StringBuilder().append("CSV_").append(sDate).append(".CSV").toString();
+                List<Expense> tempExpenses = expenses;
+                //extract expenses
+                if (startCSVDate[0] != null && endCSVDate[0] != null) {
+                    tempExpenses = ComputeReport.extractExpenses(startCSVDate[0], endCSVDate[0], expenses, null, null);
+                }
+                File outputFile = CSVUtils.generateCSVFile(tempExpenses, categoriesForAccount, account.getAccountName(), tempFileName, getActivity());
+                //need to fill up the email
+                MailUtils.sendMail(getActivity(), "", "CSV file", "CSV file", outputFile);
             }
         });
 
@@ -226,19 +270,25 @@ public class ExportTabFragment extends Fragment {
         }
 
         if(account == null) {
-            startButton.setEnabled(false);
-            endButton.setEnabled(false);
+            startQIFButton.setEnabled(false);
+            endQIFButton.setEnabled(false);
+            startCSVButton.setEnabled(false);
+            endCSVButton.setEnabled(false);
             importSQLButton.setEnabled(true);
             exportSQLButton.setEnabled(false);
             exportSQLMailButton.setEnabled(false);
-            exportButton.setEnabled(false);
+            exportQIFButton.setEnabled(false);
+            exportCSVButton.setEnabled(false);
         } else {
-            startButton.setEnabled(true);
-            endButton.setEnabled(true);
+            startQIFButton.setEnabled(true);
+            endQIFButton.setEnabled(true);
+            startCSVButton.setEnabled(true);
+            endCSVButton.setEnabled(true);
             importSQLButton.setEnabled(true);
             exportSQLButton.setEnabled(true);
             exportSQLMailButton.setEnabled(true);
-            exportButton.setEnabled(true);
+            exportQIFButton.setEnabled(true);
+            exportCSVButton.setEnabled(true);
         }
 
         return view;
@@ -335,5 +385,6 @@ public class ExportTabFragment extends Fragment {
         if(participantsForAccount != null) {
             outState.putSerializable("participants", participantsForAccount);
         }
+        super.onSaveInstanceState(outState);
     }
 }

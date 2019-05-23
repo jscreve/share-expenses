@@ -74,6 +74,7 @@
     <string name="export_SQL_mail">Export du SQL par mail</string>
 
     <string name="QIF_file">Fichier QIF</string>
+    <string name="CSV_file">Fichier CSV</string>
     <string name="SQL_files">Fichiers SQL</string>
 
     <string name="add_participant">Ajout participant</string>

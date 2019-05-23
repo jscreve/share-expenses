@@ -3,10 +3,15 @@ package com.shareexpenses.app;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.*;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.TextView;
+
 import com.shareexpenses.app.model.Account;
 import com.shareexpenses.app.model.Category;
 import com.shareexpenses.app.model.Expense;
@@ -18,7 +23,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Map;
 
 /**
  * Created by dlta on 14/03/2014.
@@ -222,6 +226,7 @@ public class StatsTabFragment extends Fragment implements UpdateParticipantsInte
         if(expenses != null) {
             outState.putSerializable("expenses", expenses);
         }
+        super.onSaveInstanceState(outState);
     }
 
     private void hideKeyboardForCurrentSelection(){

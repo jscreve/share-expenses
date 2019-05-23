@@ -4,8 +4,16 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.*;
-import android.widget.*;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.CheckBox;
+import android.widget.ListView;
+
 import com.shareexpenses.app.model.Account;
 import com.shareexpenses.app.model.Category;
 import com.shareexpenses.app.model.Expense;
@@ -250,6 +258,7 @@ public class ExpensesTabFragment extends Fragment {
         if(categories != null) {
             outState.putSerializable("categories", categories);
         }
+        super.onSaveInstanceState(outState);
     }
 
 }
