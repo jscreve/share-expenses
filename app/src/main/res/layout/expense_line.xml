@@ -17,7 +17,7 @@
                   android:layout_height="wrap_content">
         <TextView
                 android:layout_width="fill_parent"
-                android:layout_height="0dp"
+            android:layout_height="wrap_content"
                 android:text="5"
                 android:id="@+id/name_textView"
                 android:textSize="20sp"
@@ -25,7 +25,7 @@
                 android:gravity="center_vertical|center_horizontal|left" android:textStyle="bold"/>
         <TextView
                 android:layout_width="fill_parent"
-                android:layout_height="0dp"
+            android:layout_height="wrap_content"
                 android:text="5"
                 android:id="@+id/value_textView"
                 android:gravity="center_vertical|center_horizontal|left"
@@ -33,7 +33,7 @@
                 android:singleLine="false" android:layout_weight="1" android:textStyle="bold"/>
         <TextView
                 android:layout_width="fill_parent"
-                android:layout_height="0dp"
+            android:layout_height="wrap_content"
                 android:text="5"
                 android:id="@+id/value_textView2"
                 android:gravity="center_vertical|center_horizontal|left"
